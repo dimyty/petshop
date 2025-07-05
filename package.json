@@ -1,8 +1,8 @@
-"homepage": "https://petshop-gec.pages.dev",
 {
   "name": "vite-react-typescript-starter",
   "private": true,
   "version": "0.0.0",
+  "homepage": "https://petshop-gec.pages.dev",
   "type": "module",
   "scripts": {
     "dev": "vite",
