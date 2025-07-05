@@ -1,16 +1,19 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
+import path from 'path'; // Добави този импорт
 
 export default defineConfig({
   plugins: [react()],
-  optimizeDeps: {
-    exclude: ['lucide-react'],
-  },
-  base: '/', // Добави този ред
+  base: '/',
   build: {
-    outDir: 'build', // Добави този блок
+    outDir: 'build',
+  },
+  resolve: {
+    alias: {
+      '@': path.resolve(__dirname, './src'), // Решава проблем с пътищата
+    }
   },
   server: {
-    historyApiFallback: true, // Добави този блок
+    historyApiFallback: true,
   }
 });
